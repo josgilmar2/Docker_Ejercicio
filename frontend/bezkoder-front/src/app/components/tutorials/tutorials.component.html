@@ -1,0 +1,13 @@
+<div>
+    <ul *ngFor="let tutorial of tutoriales">
+        <li>{{tutorial.title}}</li>
+    </ul>
+</div>
+
+<form style="display: flex; flex-direction: column; width: 50%; margin: 0 auto;">
+    <label for="title" style="margin-bottom: 10px;">Título</label>
+    <input type="text" name="title" id="title" placeholder="Introduce el título" style="margin-bottom: 10px;" [(ngModel)]="title">
+    <label for="description" style="margin-bottom: 10px;">Descripción</label>
+    <textarea name="description" id="description" placeholder="Introduce la descripción" cols="30" rows="10" [(ngModel)]="description" style="margin-bottom: 10px;"></textarea>
+    <input type="submit" value="Crear tutorial" (click)="createTutorial()">
+</form>
